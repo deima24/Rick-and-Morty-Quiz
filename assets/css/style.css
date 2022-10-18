@@ -1,0 +1,17 @@
+body {
+    text-align: center;
+    background: url('../images/rick-morty\ \(1\).jpg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-attachment: fixed;
+    font-size: 1.8rem;
+    margin: 0;
+}
+
+#game-space {
+    border: solid 2px black;
+    max-width: 40%;
+    text-align: center;
+    justify-content: center;
+    margin: auto;
+}
