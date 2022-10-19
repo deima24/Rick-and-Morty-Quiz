@@ -71,3 +71,11 @@ function displayQuestion(currentQuestion) {
     answerThree.addEventListener('click', checkAnswer);
     answerFour.addEventListener('click', checkAnswer);
 }
+
+function shuffle () {
+    shuffledQuestions = questions.sort(function() {
+        return Math.random() - 0.5;
+    });
+    displayQuestion(shuffledQuestions[currentQuestionIndex]);
+    console.log('Shuffled');
+}
