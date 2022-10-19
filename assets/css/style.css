@@ -14,9 +14,9 @@ body {
     max-height: 70%;
     text-align: center;
     justify-content: center;
-    margin: auto;
     background-color: lightseagreen;
     font-size: 1.2rem;
+    margin-left: 30%;
 }
 
 #answer-area {
@@ -24,4 +24,41 @@ body {
     gap: 5px;
     max-width: 700px;
     margin: auto;
+}
+
+.answer-btn {
+    color:black;
+    padding: 10px;
+    border: 2px solid greenyellow;
+    border-radius: 10px;
+}
+
+.answer-btn:hover {
+    border: 2px solid black;
+}
+
+#score {
+    margin: 10px;
+}
+
+#score-p {
+    margin: 20px;
+}
+
+.start-btn, .next-btn, .btn {
+    color: black;
+    font-size: larger;
+    border-radius: 10px;
+    border: 2px solid greenyellow;
+    background-color: white;
+    margin: 10px;
+    padding: 5px;
+}
+
+.btn:hover {
+    border: 2px solid black;
+}
+
+.hide {
+    display: none;
 }
