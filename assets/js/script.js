@@ -11,7 +11,7 @@ let playAgain = document.getElementById('play-again-btn');
 //game area
 
 let questionArea = document.getElementById('question-area');
-let endGame = document.getElementById('end-game');
+let endGameArea = document.getElementById('end-game');
 let questionTitle = document.getElementById('question-area');
 let question = document.getElementById('question');
 
@@ -129,5 +129,17 @@ function nextQuestion() {
         clearInterval(myInterval);
     } else {
         runGame();
+    }
+}
+
+function endGame() {
+    console.log('Calculating total score..');
+    clearInterval(myInterval);
+    questionArea.classList.add('hide');
+    endGameArea.classList.remove('hide');
+    finalScore = correctAnswerCounter * scorePoints;
+    finalScore.innerHTML = `Congratulations! Your total score is: ${finalScore}.`;
+    if (correctAnswerCounter <= 7) {
+        finalScore.innerHTML = `Oh no! You only scored ${finalScore}. Better luck next time!`;
     }
 }
