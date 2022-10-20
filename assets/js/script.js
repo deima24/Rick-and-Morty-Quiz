@@ -106,3 +106,13 @@ function checkAnswer () {
         answerButtons[i].removeEventListener('click', checkAnswer);
     }
 }
+
+function incrementScore() {
+    correctAnswerCounter++;
+    score = (correctAnswerCounter * scorePoints);
+    scoreText.innerText = score;
+    console.log('Adding points');
+    console.log('Total score is ' + correctAnswerCounter);
+    return;
+}
+
