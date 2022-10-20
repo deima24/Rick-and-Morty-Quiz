@@ -79,3 +79,30 @@ function shuffle () {
     displayQuestion(shuffledQuestions[currentQuestionIndex]);
     console.log('Shuffled');
 }
+
+function checkAnswer () {
+    console.log('checking answer');
+    clearInterval(myInterval);
+    console.log(questions[0].correct); 
+    if(this.innerHTML === questions[0].correct) {
+        this.classList.add('btn-correct');
+        console.log('Correct!');
+        incrementScore(scorePoints);
+    } else {
+        this.classList.add('btn-wrong');
+        console.log('Wrong!');
+        for (let i = 0; i < answerButtons.length; i++) {
+            if (answerButtons[i].innerHTML === questions[0].correct) {
+                answerButtons[i].classList.add('btn-correct');
+            }
+        }
+    }
+    if (questionCounter === 10) {
+        nextButton.innerHTML = 'End';
+    }
+    nextButton.classList.remove('hide');
+
+    for (let i = 0; i < answerButtons.length; i++) {
+        answerButtons[i].removeEventListener('click', checkAnswer);
+    }
+}
