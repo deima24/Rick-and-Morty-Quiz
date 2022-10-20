@@ -143,3 +143,25 @@ function endGame() {
         finalScore.innerHTML = `Oh no! You only scored ${finalScore}. Better luck next time!`;
     }
 }
+
+function resetGame() {
+    console.log('Reseting game');
+    score = ((correctAnswerCounter * scorePoints) - (correctAnswerCounter * scorePoints));
+    endGameArea.classList.add('hide');
+    questionCounter = (maxQuestion - 10);
+    for (let i = 0; i < answerButtons.length; i++) {
+        answerButtons[i].classList.remove('btn-correct');
+        answerButtons[i].classList.remove('btn-wrong');
+    }
+    nextButton.innerText = 'Next';
+    restoreQuestions();
+    correctAnswerCounter = 0;
+    scoreText.innerText = `${correctAnswerCounter - correctAnswerCounter}`;
+    runGame();
+}
+
+function restoreQuestions() {
+    console.log('Restoring Questions');
+    questions.push(...removedQuestions);
+    removedQuestions.length = 0;
+}
