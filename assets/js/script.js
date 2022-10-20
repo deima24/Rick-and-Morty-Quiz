@@ -116,3 +116,18 @@ function incrementScore() {
     return;
 }
 
+function nextQuestion() {
+    console.log('Generating next question...');
+    for (let i = 0; i < answerButtons.length; i++) {
+        answerButtons[1].classList.remove('btn-correct');
+        answerButtons[1].classList.remove('btn-wrong');
+    }
+    removedQuestions.push(...questions.splise(0, 1));
+    counter = 0;
+    if (questionCounter === 10) {
+        endGame();
+        clearInterval(myInterval);
+    } else {
+        runGame();
+    }
+}
