@@ -1,6 +1,7 @@
 //buttons
 
 let startButton = document.getElementById('start-button');
+let answerButtons = document.getElementsByClassName('answer-btn');
 let answerOne = document.getElementById('answer1');
 let answerTwo = document.getElementById('answer2');
 let answerThree = document.getElementById('answer3');
@@ -12,8 +13,9 @@ let playAgain = document.getElementById('play-again-btn');
 
 let questionArea = document.getElementById('question-area');
 let endGameArea = document.getElementById('end-game');
-let questionTitle = document.getElementById('question-area');
-let question = document.getElementById('question');
+let questionTitle = document.getElementById('question-title');
+let questionElement = document.getElementById('question');
+let introArea = document.getElementById('begining-text');
 
 //question choises
 
@@ -30,19 +32,19 @@ let finalScore = document.getElementById('final-score');
 let finalText = document.getElementById('final-score-text');
 let correctAnswerCounter = 0;
 
-const scorePoints = 7;
+const scorePoints = 1;
 const maxQuestion = 10;
 
 //listeners
 
 startButton.addEventListener('click', function() {
     runGame();
-    myInterval = setInterval(countdown, 1000);
+    myInterval = setInterval(1000);
 });
 
 nextButton.addEventListener('click', function() {
     nextQuestion();
-    myInterval = setInterval(countdown, 1000);
+    myInterval = setInterval(1000);
 });
 
 playAgain.addEventListener('click', resetGame);
@@ -50,13 +52,13 @@ playAgain.addEventListener('click', resetGame);
 function runGame () {
     console.log('Started');
     startButton.classList.add('hide');
+    introArea.classList.add('hide');
     questionArea.classList.remove('hide');
     nextButton.classList.add('hide');
     currentQuestionIndex = [0];
     questionCounter++;
     questionTitle.innerText = `Question ${questionCounter} of ${maxQuestion}`;
     shuffle();
-    countdown();
 }
 
 function displayQuestion(currentQuestion) {
@@ -81,8 +83,7 @@ function shuffle () {
 }
 
 function checkAnswer () {
-    console.log('checking answer');
-    clearInterval(myInterval);
+    console.log('checking answer');     
     console.log(questions[0].correct); 
     if(this.innerHTML === questions[0].correct) {
         this.classList.add('btn-correct');
@@ -122,11 +123,10 @@ function nextQuestion() {
         answerButtons[1].classList.remove('btn-correct');
         answerButtons[1].classList.remove('btn-wrong');
     }
-    removedQuestions.push(...questions.splise(0, 1));
+    removedQuestions.push(...questions.splice(0, 1));
     counter = 0;
     if (questionCounter === 10) {
         endGame();
-        clearInterval(myInterval);
     } else {
         runGame();
     }
@@ -134,7 +134,6 @@ function nextQuestion() {
 
 function endGame() {
     console.log('Calculating total score..');
-    clearInterval(myInterval);
     questionArea.classList.add('hide');
     endGameArea.classList.remove('hide');
     finalScore = correctAnswerCounter * scorePoints;
