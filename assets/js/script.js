@@ -120,8 +120,8 @@ function incrementScore() {
 function nextQuestion() {
     console.log('Generating next question...');
     for (let i = 0; i < answerButtons.length; i++) {
-        answerButtons[1].classList.remove('btn-correct');
-        answerButtons[1].classList.remove('btn-wrong');
+        answerButtons[i].classList.remove('btn-correct');
+        answerButtons[i].classList.remove('btn-wrong');
     }
     removedQuestions.push(...questions.splice(0, 1));
     counter = 0;

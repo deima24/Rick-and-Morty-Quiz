@@ -62,3 +62,11 @@ body {
 .hide {
     display: none;
 }
+
+.btn-correct {
+    background-color: #08bd11;
+}
+
+.btn-wrong {
+    background-color: #d62828;
+}
