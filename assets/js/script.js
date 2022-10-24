@@ -133,13 +133,14 @@ function nextQuestion() {
 }
 
 function endGame() {
-    console.log('Calculating total score..');
+    console.log('Calculating total score...');
+    clearInterval(myInterval);
     questionArea.classList.add('hide');
     endGameArea.classList.remove('hide');
     finalScore = correctAnswerCounter * scorePoints;
-    finalScore.innerHTML = `Congratulations! Your total score is: ${finalScore}.`;
+    finalText.innerHTML = `Congratulations! Your total score is: ${finalScore}.`;
     if (correctAnswerCounter <= 7) {
-        finalScore.innerHTML = `Oh no! You only scored ${finalScore}. Better luck next time!`;
+        finalText.innerHTML = `Oh no! You only scored ${finalScore}. Better luck next time!`;
     }
 }
 
@@ -196,7 +197,7 @@ let questions = [
         answer2: '21 years old',
         answer3: '17 years old',
         answer4: '19 years old',
-        correct: '17 years old ',
+        correct: '17 years old',
     },
     {
         question: "Who is Morty's sister?",
