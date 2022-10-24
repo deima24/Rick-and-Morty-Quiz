@@ -2,8 +2,9 @@ body {
     text-align: center;
     background: url('../images/rick-morty\ \(1\).jpg');
     background-repeat: no-repeat;
-    background-size: 100%;
-    background-attachment: fixed;
+    background-size: 100rem;
+    background-position: center;
+    background-attachment:fixed;
     font-size: 1.8rem;
     margin: 0;
 }
@@ -74,4 +75,44 @@ body {
 
 .btn-wrong {
     background-color: #d62828;
+}
+
+@media screen and (min-width: 412px) {
+    body {
+        background-size: 120rem;
+        font-size: 1rem;
+    }
+    #game-space {
+        font-size: 1rem;
+    }
+} 
+
+@media screen and (min-width: 280px) {
+    body {
+        font-size: 0.9rem;
+    }
+    #game-space {
+        font-size: 0.9rem;
+    }
+}
+
+@media screen and (min-width: 540px) {
+    body {
+        font-size: 1.5rem;
+    }
+    #game-space {
+        font-size: 1.3rem;
+    }
+}
+
+@media screen and (min-width: 912px) {
+    body {
+        background-size: 180rem;
+        font-size: 2.3rem;
+    }
+    #game-space {
+        font-size: 2rem;
+        height: 80%;
+        width: 90%;
+    }
 }
