@@ -77,42 +77,26 @@ body {
     background-color: #d62828;
 }
 
-@media screen and (min-width: 412px) {
+@media screen and (max-width: 540px) {
     body {
-        background-size: 120rem;
-        font-size: 1rem;
+        font-size: 1.4rem;
     }
-    #game-space {
-        font-size: 1rem;
-    }
-} 
 
-@media screen and (min-width: 280px) {
-    body {
-        font-size: 0.9rem;
-    }
     #game-space {
-        font-size: 0.9rem;
+        max-width: 80%;
+        margin: auto;
     }
 }
 
-@media screen and (min-width: 540px) {
-    body {
-        font-size: 1.5rem;
-    }
+@media screen and (max-width: 720px) {
     #game-space {
-        font-size: 1.3rem;
+        margin: auto;
+        max-width: 70%;
     }
 }
 
-@media screen and (min-width: 912px) {
+@media screen and (max-width: 410px) {
     body {
-        background-size: 180rem;
-        font-size: 2.3rem;
-    }
-    #game-space {
-        font-size: 2rem;
-        height: 80%;
-        width: 90%;
+        font-size: 1.2rem;
     }
 }
