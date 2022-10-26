@@ -39,12 +39,10 @@ const maxQuestion = 10;
 
 startButton.addEventListener('click', function() {
     runGame();
-    myInterval = setInterval(1000);
 });
 
 nextButton.addEventListener('click', function() {
     nextQuestion();
-    myInterval = setInterval(1000);
 });
 
 playAgain.addEventListener('click', resetGame);
@@ -124,7 +122,6 @@ function nextQuestion() {
         answerButtons[i].classList.remove('btn-wrong');
     }
     removedQuestions.push(...questions.splice(0, 1));
-    counter = 0;
     if (questionCounter === 10) {
         endGame();
     } else {
@@ -134,7 +131,6 @@ function nextQuestion() {
 
 function endGame() {
     console.log('Calculating total score...');
-    clearInterval(myInterval);
     questionArea.classList.add('hide');
     endGameArea.classList.remove('hide');
     finalScore = correctAnswerCounter * scorePoints;
