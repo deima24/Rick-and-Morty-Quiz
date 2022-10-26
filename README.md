@@ -45,3 +45,18 @@ If the user scored less than 7 points they will see a message 'Better luck next 
 
 
 At the end player has two options what to do at the end. User can sellect 'Play Again' to start the game from the begining with new set of question. Or thay can sellect 'Home' which they will be taken back to the Home Page.
+
+
+## Technologies used
+
+I used this technologies to create this website.
+
+1) HTML - Content and Structure
+
+2) CSS - Styling
+
+3) JavaScript - Functions
+
+4) Gitpod - Website deployment
+
+5) Github - Website Hosting
