@@ -28,3 +28,20 @@ Once the user has clicked on the correct answer it will turn to the green or it 
 ![Correct answer](assets/readmeimg/correct-answer.png)
 
 ![Wrong answer](assets/readmeimg/wrong-answer.png)
+
+
+## Quiz End
+
+On the last question when the user answered instead of 'Next' button they will see the 'End' button meaning that they answered all 10 questions. If they answered more than 7 questions correct they will see a message congratulating them and how many point they got.
+
+![at the end of quiz](assets/readmeimg/at-the-end-of-quiz.png)
+
+![score more than 7](assets/readmeimg/score-more-than-7.png)
+
+
+If the user scored less than 7 points they will see a message 'Better luck next time' and the score.
+
+![score less than 7](assets/readmeimg/less-than-7.png)
+
+
+At the end player has two options what to do at the end. User can sellect 'Play Again' to start the game from the begining with new set of question. Or thay can sellect 'Home' which they will be taken back to the Home Page.
