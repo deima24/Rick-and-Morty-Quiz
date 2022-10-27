@@ -60,3 +60,24 @@ I used this technologies to create this website.
 4) Gitpod - Website deployment
 
 5) Github - Website Hosting
+
+
+# Deployment
+
+The site was deployd to the GitHub page by following these steps:
+
+1) In GitHub repository locate setings.
+
+![settings](assets/readmeimg/settings.png)
+
+2) Once in settings navigate the 'Pages' tab on the side menu.
+
+![pages](assets/readmeimg/pages.png)
+
+3) Under the Branch sellect master or main , then click save.
+
+![branch](assets/readmeimg/branch.png)
+
+4) After few minutes you can see your page is live and the link to your page is located under the GitHub Pages.
+
+![live page](assets/readmeimg/live-page.png)
