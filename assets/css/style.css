@@ -1,8 +1,8 @@
 body {
     text-align: center;
-    background: url('../images/rick-morty\ \(1\).jpg');
+    background: url('../images/rick-mortyhd.png');
     background-repeat: no-repeat;
-    background-size: 100rem;
+    background-size: cover;
     background-position: center;
     background-attachment:fixed;
     font-size: 1.8rem;
