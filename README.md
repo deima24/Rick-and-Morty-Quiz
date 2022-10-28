@@ -81,3 +81,34 @@ The site was deployd to the GitHub page by following these steps:
 4) After few minutes you can see your page is live and the link to your page is located under the GitHub Pages.
 
 ![live page](assets/readmeimg/live-page.png)
+
+
+# Testing
+
+HTML
+No errors were returned when passing through the official W3C validator
+
+![html checker](assets/readmeimg/HTML-check.png)
+
+
+CSS
+No errors were found when passing through the official (Jigsaw) validator
+
+![CSS checker](assets/readmeimg/css-check.png)
+
+
+JavaScript
+No errors were found when passing through the official Jshint validator
+
+![js checker](assets/readmeimg/js-check.png)
+
+
+# Deployment
+
+This section should describe the process you went through to deploy the project to a hosting platform (e.g. GitHub)
+
+The site was deployed to GitHub pages. The steps to deploy are as follows:
+In the GitHub repository, navigate to the Settings tab
+From the source section drop-down menu, select the Master Branch
+Once the master branch has been selected, the page will be automatically refreshed with a detailed ribbon display to indicate the successful deployment.
+The live link can be found here -
