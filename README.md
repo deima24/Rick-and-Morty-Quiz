@@ -1,7 +1,9 @@
 # Rick-and-Morty-Quiz
 
-This Rick and Morty quiz is for people who want to test theyre knoelage about it. Questions are based about the show from the all sesones.
-The show is very popular so I just wanted to create this quiz about the show that I enjoy.
+This Rick and Morty quiz is for people who want to test their knowledge about it. Questions are based on the show from the all seasons.
+The show is very popular, so I just wanted to create this quiz about the show that I enjoy.
+
+![page display](assets/readmeimg/difrent-size-page.png)
 
 # Features
 
@@ -82,6 +84,14 @@ The site was deployd to the GitHub page by following these steps:
 
 ![live page](assets/readmeimg/live-page.png)
 
+This section should describe the process you went through to deploy the project to a hosting platform (e.g. GitHub)
+
+The site was deployed to GitHub pages. The steps to deploy are as follows:
+In the GitHub repository, navigate to the Settings tab
+From the source section drop-down menu, select the Master Branch
+Once the master branch has been selected, the page will be automatically refreshed with a detailed ribbon display to indicate the successful deployment.
+The live link can be found here - https://deima24.github.io/Rick-and-Morty-Quiz/
+
 
 # Testing
 
@@ -103,12 +113,10 @@ No errors were found when passing through the official Jshint validator
 ![js checker](assets/readmeimg/js-check.png)
 
 
-# Deployment
+## Future Features
 
-This section should describe the process you went through to deploy the project to a hosting platform (e.g. GitHub)
+Add more questions to the questions array as new seasons are realised are released.
 
-The site was deployed to GitHub pages. The steps to deploy are as follows:
-In the GitHub repository, navigate to the Settings tab
-From the source section drop-down menu, select the Master Branch
-Once the master branch has been selected, the page will be automatically refreshed with a detailed ribbon display to indicate the successful deployment.
-The live link can be found here - https://deima24.github.io/Rick-and-Morty-Quiz/
+Add music to the back ground while doing the quiz.
+
+Change the background image so it would look nice to all difrent size divices.
