@@ -47,8 +47,9 @@ nextButton.addEventListener('click', function() {
 
 playAgain.addEventListener('click', resetGame);
 
+
+
 function runGame () {
-    console.log('Started');
     startButton.classList.add('hide');
     introArea.classList.add('hide');
     questionArea.classList.remove('hide');
@@ -77,19 +78,15 @@ function shuffle () {
         return Math.random() - 0.5;
     });
     displayQuestion(shuffledQuestions[currentQuestionIndex]);
-    console.log('Shuffled');
 }
 
-function checkAnswer () {
-    console.log('checking answer');     
+function checkAnswer () {    
     console.log(questions[0].correct); 
     if(this.innerHTML === questions[0].correct) {
         this.classList.add('btn-correct');
-        console.log('Correct!');
         incrementScore(scorePoints);
     } else {
         this.classList.add('btn-wrong');
-        console.log('Wrong!');
         for (let i = 0; i < answerButtons.length; i++) {
             if (answerButtons[i].innerHTML === questions[0].correct) {
                 answerButtons[i].classList.add('btn-correct');
@@ -110,13 +107,11 @@ function incrementScore() {
     correctAnswerCounter++;
     score = (correctAnswerCounter * scorePoints);
     scoreText.innerText = score;
-    console.log('Adding points');
     console.log('Total score is ' + correctAnswerCounter);
     return;
 }
 
 function nextQuestion() {
-    console.log('Generating next question...');
     for (let i = 0; i < answerButtons.length; i++) {
         answerButtons[i].classList.remove('btn-correct');
         answerButtons[i].classList.remove('btn-wrong');
@@ -130,7 +125,6 @@ function nextQuestion() {
 }
 
 function endGame() {
-    console.log('Calculating total score...');
     questionArea.classList.add('hide');
     endGameArea.classList.remove('hide');
     finalScore = correctAnswerCounter * scorePoints;
@@ -141,10 +135,9 @@ function endGame() {
 }
 
 function resetGame() {
-    console.log('Reseting game');
-    score = ((correctAnswerCounter * scorePoints) - (correctAnswerCounter * scorePoints));
+    score = 0;
     endGameArea.classList.add('hide');
-    questionCounter = (maxQuestion - 10);
+    questionCounter = 0;
     for (let i = 0; i < answerButtons.length; i++) {
         answerButtons[i].classList.remove('btn-correct');
         answerButtons[i].classList.remove('btn-wrong');
@@ -157,7 +150,6 @@ function resetGame() {
 }
 
 function restoreQuestions() {
-    console.log('Restoring Questions');
     questions.push(...removedQuestions);
     removedQuestions.length = 0;
 }
