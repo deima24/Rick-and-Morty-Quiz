@@ -48,7 +48,7 @@ nextButton.addEventListener('click', function() {
 playAgain.addEventListener('click', resetGame);
 
 
-
+// runs the game when start button is pressed
 function runGame () {
     startButton.classList.add('hide');
     introArea.classList.add('hide');
@@ -60,6 +60,7 @@ function runGame () {
     shuffle();
 }
 
+//question display, check is question is answered correctly
 function displayQuestion(currentQuestion) {
     questionElement.innerText = currentQuestion.question;
     answerOne.innerText = currentQuestion.answer1;
@@ -73,13 +74,14 @@ function displayQuestion(currentQuestion) {
     answerFour.addEventListener('click', checkAnswer);
 }
 
+//shuffles the questions so it wouldnt be the same all the time
 function shuffle () {
     shuffledQuestions = questions.sort(function() {
         return Math.random() - 0.5;
     });
     displayQuestion(shuffledQuestions[currentQuestionIndex]);
 }
-
+// checks the answer if its correct gives 1 point, if no no points added
 function checkAnswer () {    
     console.log(questions[0].correct); 
     if(this.innerHTML === questions[0].correct) {
@@ -102,7 +104,7 @@ function checkAnswer () {
         answerButtons[i].removeEventListener('click', checkAnswer);
     }
 }
-
+// increments the score every time the question is answered correctly
 function incrementScore() {
     correctAnswerCounter++;
     score = (correctAnswerCounter * scorePoints);
@@ -110,7 +112,7 @@ function incrementScore() {
     console.log('Total score is ' + correctAnswerCounter);
     return;
 }
-
+//displays next question, is reached 10 question the game is over
 function nextQuestion() {
     for (let i = 0; i < answerButtons.length; i++) {
         answerButtons[i].classList.remove('btn-correct');
@@ -123,7 +125,7 @@ function nextQuestion() {
         runGame();
     }
 }
-
+//end game displays total score of the game, 
 function endGame() {
     questionArea.classList.add('hide');
     endGameArea.classList.remove('hide');
@@ -133,7 +135,7 @@ function endGame() {
         finalText.innerHTML = `Oh no! You only scored ${finalScore}. Better luck next time!`;
     }
 }
-
+//resets the game to the beggining with 0 points
 function resetGame() {
     score = 0;
     endGameArea.classList.add('hide');
@@ -148,12 +150,12 @@ function resetGame() {
     scoreText.innerText = `${correctAnswerCounter - correctAnswerCounter}`;
     runGame();
 }
-
+//restores the questions that were in a previous game
 function restoreQuestions() {
     questions.push(...removedQuestions);
     removedQuestions.length = 0;
 }
-
+// questions of the game
 let questions = [
     {
         question : "When was the series premiered?",
